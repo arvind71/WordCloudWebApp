@@ -6,9 +6,9 @@ import matplotlib.pyplot as plt
 from io import BytesIO
 app = Flask(__name__)
 
-@app.route('/upload')
+@app.route('/')
 def upload_file():
-    return render_template('upload.html')
+    return render_template('index.html')
 @app.route('/get_image',methods = ['GET', 'POST'])
 def get_image():
     if request.method == 'POST':
